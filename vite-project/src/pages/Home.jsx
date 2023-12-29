@@ -16,7 +16,7 @@ import Plane from '../models/Plane'
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false)
-
+  const [isCurrentStage, setCurrentStage] = useState(1)
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -34,12 +34,31 @@ const Home = () => {
   }
 
 
+  const adjustPlaneForScreenSize = () => {
+    let screenScale;
+    let screenPosition;
+    
+
+    if(window.innerWidth < 768) {
+      screenScale = [1.5,1.5,1.5]; 
+      screenPosition = [0,-1.5,0];
+    }
+    else{
+      screenScale = [3,3,3];  
+      screenPosition = [0,-4,-4];
+
+    }
+
+    return [screenScale, screenPosition];
+  }
+
   const [islandScale, islandPosition, islandRotation]  = adjustIslandForScreenSize();
+  const [planeScale, planePosition]  = adjustPlaneForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
       
-    <Canvas className='w-full h-screen bg-transparent'
+    <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
       camera={{near: 0.1, far: 1000}}
     >
       <Suspense fallback={<Loader />}>
@@ -48,13 +67,23 @@ const Home = () => {
         <hemisphereLight skyColor = '#b1e1ff' groundColor='#000000'/>
 
 
-        <Plane/>
+        <Plane
+          isRotating={isRotating}
+          position={planePosition}
+          scale={planeScale}
+          rotation={[0,20,0]}
+        />
         <Bird/>
-        <Sky />
+        <Sky 
+          isRotating={isRotating}
+        />
         <Island  
           position={islandPosition}
           scale={islandScale}
           rotation={islandRotation}
+          isRotating={isRotating}
+          setIsRotating={setIsRotating}
+          setCurrentStage = {setCurrentStage}
         />
       </Suspense>
     </Canvas>
