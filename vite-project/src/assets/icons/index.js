@@ -26,9 +26,15 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import kfu from './kfu.png'
+import hhru from './hhru.png'
+import app from './app.svg'
 
 export {
     css,
+    app,
+    kfu,
+    hhru,
     express,
     git,
     github,
