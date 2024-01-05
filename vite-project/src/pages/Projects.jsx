@@ -6,7 +6,7 @@ import CTA from '../components/CTA'
 
 const Projects = () => {
   return (
-    <section className='max-container'>
+    <section className='max-container h-[100vh]'>
       <h1 className='head-text'>
         Мое <span className='blue-gradient_text font-semibold'>Портфолио</span>
       </h1>
