@@ -70,11 +70,11 @@ export const skills = [
         name: "React",
         type: "Frontend",
     },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
+    // {
+    //     imageUrl: sass,
+    //     name: "Sass",
+    //     type: "Frontend",
+    // },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -122,6 +122,11 @@ export const socialLinks = [
         link: 'https://github.com/z3r069-lab',
     },
     {
+      name: 'GitHub2',
+      iconUrl: github,
+      link: 'https://github.com/OSBeers',
+    	},
+    {
         name: 'HeadHunter',
         iconUrl: hhru,
         link: 'https://hh.ru/resume/820f6367ff0c78a6640039ed1f56316d394a70',
@@ -136,6 +141,13 @@ export const projects = [
         description: 'Разработка Web приложения имитации популярного сервиса message',
         link: 'https://github.com/z3r069-lab/chat_clone_node',
     },
+    {
+      iconUrl: app,
+      theme: 'btn-back-orange',
+      name: 'This portfolio',
+      description: 'Разработка сайта-портфолио для дисплея своих потугов в проекты',
+      link: 'https://github.com/OSBeers/3d_Portfolio',
+  },
     {
       iconUrl: app,
       theme: 'btn-back-blue',
