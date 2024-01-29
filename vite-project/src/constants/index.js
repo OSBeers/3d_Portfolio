@@ -157,6 +157,13 @@ export const projects = [
   },
   {
     iconUrl: app,
+    theme: 'btn-back-red',
+    name: 'Leet code',
+    description: 'собрание моих leet code',
+    link: 'https://github.com/OSBeers/leetcode',
+},
+  {
+    iconUrl: app,
     theme: 'btn-back-yellow',
     name: ' Voluptate officia occaecat in eiusmod magna nostrud amet.',
     description: 'Aliqua exercitation amet consectetur non laboris labore laboris excepteur. Qui aute aliqua minim nostrud magna consectetur consequat velit sint nostrud. Adipisicing ipsum incididunt in ad fugiat reprehenderit duis est nisi eiusmod commodo.',
